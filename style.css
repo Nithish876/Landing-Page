@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    user-select: none;
+
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.home {
+    background: rgb(236, 155, 52);
+    background: linear-gradient(90deg, rgb(252, 152, 23) 27%, rgba(223, 16, 185, .7) 60%, rgba(107, 13, 215, 1) 91%);
+    width: 100%;
+    height: 100vh;
+}
+
+nav {
+    width: 100%;
+    height: 50px;
+}
+
+nav .nav-bar {
+    width: 95%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-logo {
+    font-size: 1.5em;
+    font-weight: 900;
+    color: white;
+    cursor: pointer;
+}
+
+.nav-links {
+    transition: all .4s linear;
+}
+
+.nav-links ul {
+    display: inline-flex;
+}
+
+.nav-links ul li {
+    list-style: none;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    padding: 5px 20px;
+    color: white;
+    font-weight: 500;
+    font-size: .8em;
+}
+
+.nav-links ul li a.active {
+    color: rgb(0, 84, 211);
+}
+
+.order-btn {
+    padding: 10px 20px;
+    border: none;
+    background: rgb(13, 125, 247);
+    background: linear-gradient(90deg, rgb(6, 77, 191) 51%, rgb(69, 138, 241) 100%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.231);
+    color: white;
+    border-radius: .3em;
+}
+
+.content-container {
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content {
+    width: 45%;
+    display: flex;
+    min-width: 300px;
+    max-width: 400px;
+    height: 50%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content-image {
+    width: 45%;
+    min-width: 250px;
+    max-width: 400px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-image img {
+    width: 100%;
+}
+
+.hero-title {
+    font-size: 43px;
+    font-weight: 900;
+    color: white;
+    text-align: left;
+
+}
+
+.menu-btn {
+    width: 1.5em;
+    display: none;
+}
+
+.discover-btn {
+    padding: 10px 20px;
+    width: 12em;
+    border-radius: .3em;
+    height: 3em;
+    border: none;
+    background: #272D4D;
+    color: white;
+    font-size: .8em;
+}
+
+.close-btn {
+    display: none;
+}
+
+.btn:hover {
+    filter: brightness(.8);
+    cursor: pointer;
+}
+
+.btn:active {
+    filter: brightness(.7);
+    cursor: pointer;
+}
+
+.content-para {
+    font-size: .8em;
+    color: white;
+}
+
+@media screen and (max-width:950px) {
+    .nav-links .close-btn {
+        display: block;
+        width: 2em;
+        position: relative;
+        right: -90%;
+        top: 4%;
+        cursor: pointer;
+        padding: 4px;
+    }
+
+    .nav-links {
+        width: 100%;
+        position: fixed;
+        display: flex;
+        transform: translateY(-200%);
+        flex-direction: column;
+        top: 0;
+        left: 0;
+        background: #272D4D;
+        height: 65%;
+    }
+
+    .nav-links ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100%;
+    }
+
+    .nav-links ul li a {
+        padding: 10px 20px;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links ul li {
+        width: 100%;
+    }
+
+    .menu-btn {
+        display: block;
+        cursor: pointer;
+    }
+
+    .home {
+        min-height: 130vh;
+        max-height: 500px;
+    }
+
+    .content-container {
+        max-height: 100vh;
+        margin-top: 5em;
+        justify-content: center;
+    }
+
+    .content {
+        max-height: 250px;
+        width: 100%;
+    }
+
+    .content-image {
+        width: 100%;
+        max-height: 400px;
+    }
+
+    .content .hero-title {
+        font-size: 2em;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width:365px) {
+    .content .hero-title {
+        font-size: 30px;
+    }
+}
